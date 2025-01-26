@@ -1,0 +1,29 @@
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "@/assets/logo.png";
+import classes from "./MainHeader.module.css";
+import NavLink from "./NavLink";
+
+const MainHeader = () => {
+  return (
+    <header className={classes.header}>
+      <Link className={classes.logo} href="/">
+        <Image src={logo} alt="Main Logo" priority />
+        NextLevel Food
+      </Link>
+      <nav className={classes.nav}>
+        <ul>
+          <li>
+            <NavLink href="/meals">Brows Meals</NavLink>
+          </li>
+          <li>
+            <NavLink href="/community">Foodies Community</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default MainHeader;
