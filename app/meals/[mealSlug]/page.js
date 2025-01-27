@@ -1,10 +1,10 @@
 import React from "react";
 
-const MealPage = ({params}) => {
+const MealPage = async({params}) => {
   return (
     <div>
       <div>Meal comp</div>
-     <div>{params.mealSlug}</div>
+     <div>{await params.mealSlug}</div>
     </div>
   );
 };
