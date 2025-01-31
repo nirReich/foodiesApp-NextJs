@@ -5,7 +5,8 @@ import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 
 const MealPage = async ({ params }) => {
-  const meal = getMeal(params.mealSlug);
+  
+  const meal = getMeal((await params)?.mealSlug);
   if (!meal) {
     notFound()
   }
