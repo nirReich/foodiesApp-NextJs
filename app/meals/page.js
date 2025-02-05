@@ -4,6 +4,10 @@ import classes from "./page.module.css";
 import MealsGrid from "@/components/meals/MealsGrid";
 import {getMeals} from'@/lib/meals'
 
+export const metadata = {
+  title: 'All Meals',
+  description: 'Browse the delicious meals, shared by a food-loving community.',
+};
 
 const MealsPage = () => {
   const meals = getMeals();
